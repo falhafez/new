@@ -110,37 +110,36 @@
 
   <a href="index.html" class="back-btn">← بازگشت به صفحه اصلی</a>
 
-  <div class="gallery">
-    <h3>🖼 گالری تصاویر</h3>
-    <div class="gallery-grid">
-      <div class="gallery-item">
-        <img src="lis.PNG" alt="تصویر 1" onclick="openLightbox(this.src, this.alt)">
-        <p class="gallery-caption">اینفوگرافی</p>
-      </div>
-      <div class="gallery-item">
-        <img src="lis1.JPEG" alt="اثر کتاب خوانی" onclick="openLightbox(this.src, this.alt)">
-        <p class="gallery-caption">اثر کتاب خوانی</p>
-      </div>
-      <div class="gallery-item">
-        <img src="lis2.JPEG" alt="تصویر 3" onclick="openLightbox(this.src, this.alt)">
-        <p class="gallery-caption">آموزش دیجیتال</p>
-      </div>
-      <div class="gallery-item">
-        <img src="lis3.JPEG" alt="تصویر 3" onclick="openLightbox(this.src, this.alt)">
-        <p class="gallery-caption">سواد سلامت</p>
-      </div>
-      <div class="gallery-item">
-        <img src="lis4.JPEG" alt="تصویر 3" onclick="openLightbox(this.src, this.alt)">
-        <p class="gallery-caption">کدام موتور جستجو</p>
-      </div>
-      <div class="gallery-item">
-        <img src="lis5.JPG" alt="تصویر 3" onclick="openLightbox(this.src, this.alt)">
-        <p class="gallery-caption">کتابدار کیست؟</p>
-      </div>
+ <div class="gallery">
+  <h3>🖼 گالری تصاویر</h3>
+  <div class="gallery-grid">
+    <div class="gallery-item">
+      <img src="lis.PNG" alt="اینفوگرافی" onclick="openLightbox(this.src, this.alt)">
+      <p class="gallery-caption">اینفوگرافی</p>
     </div>
-    <p style="font-size:0.8rem; color:#6c757d; margin-top:15px;">برای دیدن تصویر در اندازه بزرگ، روی آن کلیک کنید.</p>
-  </div>
-</div>
+    <div class="gallery-item">
+      <img src="lis1.JPEG" alt="اثر کتاب خوانی" onclick="openLightbox(this.src, this.alt)">
+      <p class="gallery-caption">اثر کتاب خوانی</p>
+    </div>
+    <div class="gallery-item">
+      <img src="lis2.JPEG" alt="آموزش دیجیتال" onclick="openLightbox(this.src, this.alt)">
+      <p class="gallery-caption">آموزش دیجیتال</p>
+    </div>
+    <div class="gallery-item">
+      <img src="lis3.JPEG" alt="سواد سلامت" onclick="openLightbox(this.src, this.alt)">
+      <p class="gallery-caption">سواد سلامت</p>
+    </div>
+    <div class="gallery-item">
+      <img src="lis4.JPEG" alt="کدام موتور جستجو" onclick="openLightbox(this.src, this.alt)">
+      <p class="gallery-caption">کدام موتور جستجو</p>
+    </div>
+    <div class="gallery-item">
+      <img src="lis5.JPEG" alt="کتابدار کیست؟" onclick="openLightbox(this.src, this.alt)">
+      <p class="gallery-caption">کتابدار کیست؟</p>
+    </div>
+  </div> <!-- بسته شدن gallery-grid -->
+  <p style="font-size:0.8rem; color:#6c757d; margin-top:15px;">برای دیدن تصویر در اندازه بزرگ، روی آن کلیک کنید.</p>
+</div> <!-- بسته شدن gallery -->
 
 <div id="lightbox" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); z-index:1000; justify-content:center; align-items:center; flex-direction:column;" onclick="closeLightbox()">
   <img id="lightbox-img" style="max-width:90%; max-height:80%; border-radius:16px;">
