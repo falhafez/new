@@ -15,22 +15,40 @@
     ul { margin:10px 0 15px 25px; }
     .faq-item { margin-bottom:20px; }
     .faq-question { font-weight:700; color:#be123c; margin-bottom:5px; }
-    .back-btn { display:inline-block; margin-top:35px; background:#e63946; color:white; padding:12px 28px; border-radius:40px; text-decoration:none; font-weight:500; transition:0.2s; text-align:center; }
+    .back-btn { display:inline-block; margin-bottom:30px; background:#e63946; color:white; padding:12px 28px; border-radius:40px; text-decoration:none; font-weight:500; transition:0.2s; text-align:center; }
     .back-btn:hover { background:#dc2626; }
-    /* استایل برای تصویر معرفی - کوچک و در مرکز */
-    .intro-image {
-      margin: 20px 0 25px 0;
+    .intro-image { margin:20px 0 25px 0; text-align:center; }
+    .intro-image img { width:70%; max-width:250px; height:auto; border-radius:24px; box-shadow:0 8px 20px rgba(0,0,0,0.1); border:1px solid #e2e8f0; display:block; margin:0 auto; }
+    .gallery { margin:30px 0 0; text-align:center; }
+    .gallery h3 { font-size:1.6rem; color:#e63946; margin-bottom:20px; border-bottom:2px solid #e2e8f0; display:inline-block; padding-bottom:6px; }
+    .gallery-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .gallery-item {
+      width: 200px;
+      background: #f8fafc;
+      border-radius: 20px;
+      padding: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      transition: 0.2s;
       text-align: center;
     }
-    .intro-image img {
-      width: 70%;
-      max-width: 250px;
-      height: auto;
-      border-radius: 24px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-      border: 1px solid #e2e8f0;
-      display: block;
-      margin: 0 auto;
+    .gallery-item img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 16px;
+      cursor: pointer;
+    }
+    .gallery-caption {
+      font-size: 0.9rem;
+      color: #1e293b;
+      margin-top: 10px;
+      font-weight: 500;
     }
     @media (max-width:640px) { 
       body { padding:12px; } 
@@ -39,26 +57,21 @@
       h2 { font-size:1.3rem; } 
       p, li { font-size:0.95rem; } 
       .back-btn { display:block; text-align:center; }
-      .intro-image { margin: 15px 0 20px; }
-      .intro-image img {
-        width: 80%;
-        max-width: 200px;
-      }
+      .intro-image img { width:80%; max-width:200px; }
+      .gallery-item { width: 150px; }
+      .gallery-item img { height: 120px; }
+      .gallery-caption { font-size:0.8rem; }
     }
   </style>
 </head>
 <body>
 <div class="page-container">
   <h1>سلامت در بلایا و فوریت‌ها</h1>
-
-  <!-- تصویر معرفی رشته (مرتبط با مدیریت بحران و بلایا) -->
   <div class="intro-image">
-    <img src="photo27645033135.jpg" alt="سلامت در بلایا - مدیریت بحران و فوریت‌ها">
+    <img src="photo27645033135.jpg" alt="سلامت در بلایا">
   </div>
-
   <h2>معرفی رشته</h2>
   <p>مدیریت سلامت در بلایا (Disaster Health Management) به برنامه‌ریزی، پاسخ‌دهی و بازیابی نظام سلامت پس از وقوع بلایای طبیعی (زلزله، سیل، طوفان) و انسان‌ساخت (جنگ، حوادث شیمیایی، بیوتروریسم) می‌پردازد. این رشته تلفیقی از پزشکی اورژانس، مدیریت بحران، بهداشت عمومی و توانبخشی است و هدف آن کاهش مرگ و میر و عوارض ناشی از بلایا است.</p>
-
   <h2>اهداف رشته</h2>
   <ul>
     <li>کاهش آسیب‌پذیری جامعه در برابر بلایا (مدیریت ریسک)</li>
@@ -67,7 +80,6 @@
     <li>ارزیابی سریع خسارات و نیازهای سلامت در بحران</li>
     <li>بازسازی نظام سلامت پس از بلایا و ارائه خدمات توانبخشی</li>
   </ul>
-
   <h2>مهارت‌های کسب‌شده</h2>
   <ul>
     <li>برنامه‌ریزی عملیاتی در بحران (توسعه سناریو، تریاژ، مدیریت منابع)</li>
@@ -76,7 +88,6 @@
     <li>ارتباط مؤثر با سازمان‌های امدادی (هلال احمر، سازمان بحران، ارتش)</li>
     <li>ارزیابی روانی و اجتماعی پس از سانحه (PTSD و مداخلات روانی)</li>
   </ul>
-
   <h2>دروس تخصصی</h2>
   <ul>
     <li>کاهش خطر بلایا (DRR) و تحلیل آسیب‌پذیری</li>
@@ -86,22 +97,77 @@
     <li>مدیریت پناهگاه‌های بهداشتی و جلوگیری از اپیدمی</li>
     <li>فرماندهی حادثه (ICS) و هماهنگی بین‌بخشی</li>
   </ul>
-
   <h2>بازار کار</h2>
   <p>فارغ‌التحصیلان می‌توانند در سازمان مدیریت بحران کشور، هلال احمر، وزارت بهداشت (معاونت درمان و بهداشت در حوزه بلایا)، سازمان‌های بین‌المللی مانند WHO، یونیسف، OCHA، صلیب سرخ و همچنین بیمارستان‌های آموزشی دارای بخش مدیریت بلایا مشغول شوند. همچنین نقش‌هایی مانند مدیر پاسخ به بحران، مشاور ایمنی بیمارستان، کارشناس ارشد کاهش خطر بلایا از جمله فرصت‌ها هستند.</p>
-
   <h2>ادامه تحصیل</h2>
   <p>کارشناسی ارشد و دکتری تخصصی سلامت در بلایا و فوریت‌ها در دانشگاه‌های علوم پزشکی تهران، ایران، کرمان، شیراز و اصفهان ارائه می‌شود. همچنین دوره‌های تخصصی بین‌المللی از سوی WHO و سازمان ملل وجود دارد.</p>
-
   <h2>آینده شغلی</h2>
   <p>با توجه به تغییرات اقلیمی و افزایش بلایای طبیعی، نیاز به متخصصان مدیریت سلامت در بلایا به شدت رو به رشد است. موقعیت‌هایی مانند مدیر برنامه‌های آمادگی در بیمارستان‌ها، مشاور ایمنی و پدافند غیرعامل، هماهنگ‌کننده تیم‌های واکنش سریع بین‌المللی و پژوهشگر نظام‌های سلامت در بحران‌ها از جمله چشم‌اندازهای شغلی است.</p>
-
   <h2>سوالات متداول</h2>
   <div class="faq-item"><div class="faq-question">آیا این رشته فقط برای پزشکان مناسب است؟</div><p>خیر، فارغ‌التحصیلان مدیریت، پرستاری، بهداشت عمومی، مهندسی و حتی علوم اجتماعی نیز می‌توانند در آن تحصیل کنند.</p></div>
   <div class="faq-item"><div class="faq-question">آیا فرصت شغلی در خارج از ایران دارد؟</div><p>بله، سازمان‌های بین‌المللی مانند OCHA، صلیب سرخ، MSF و WHO متخصصان این حوزه را استخدام می‌کنند.</p></div>
   <div class="faq-item"><div class="faq-question">آیا این رشته نیاز به آمادگی جسمانی خاصی دارد؟</div><p>برای مأموریت‌های امدادی، آمادگی جسمانی متوسط توصیه می‌شود، اما بسیاری از مشاغل آن مدیریتی و برنامه‌ریزی است.</p></div>
 
   <a href="index.html" class="back-btn">← بازگشت به صفحه اصلی</a>
+
+  <div class="gallery">
+    <h3>🖼 گالری تصاویر</h3>
+    <div class="gallery-grid">
+     <div class="gallery-item">
+        <img src="d.PNG" alt="تصویر 1" onclick="openLightbox(this.src, this.alt)">
+        <p class="gallery-caption">اینفوگرافی</p>
+      </div>
+      <div class="gallery-item">
+        <img src="d1.jpg" alt="تصویر 1" onclick="openLightbox(this.src, this.alt)">
+        <p class="gallery-caption">آمادگی خانوار</p>
+      </div>
+      <div class="gallery-item">
+        <img src="d2.jpg" alt="تصویر 2" onclick="openLightbox(this.src, this.alt)">
+        <p class="gallery-caption">آمادگی ساختمان</p>
+      </div>
+      <div class="gallery-item">
+        <img src="d3.jpg" alt="تصویر 3" onclick="openLightbox(this.src, this.alt)">
+        <p class="gallery-caption">کنترل استرس در جنگ</p>
+      </div>
+        <div class="gallery-item">
+        <img src="d4.jpg" alt="تصویر 4" onclick="openLightbox(this.src, this.alt)">
+        <p class="gallery-caption">کوله شرایط اضطراری</p>
+      </div>
+       <div class="gallery-item">
+        <img src="d5.jpg" alt="تصویر 5" onclick="openLightbox(this.src, this.alt)">
+        <p class="gallery-caption">نقشه تماس اضطراری</p>
+      </div>
+       <div class="gallery-item">
+        <img src="d6.jpg" alt="تصویر 5" onclick="openLightbox(this.src, this.alt)">
+        <p class="gallery-caption">مدیریت اخبار در جنگ</p>
+      </div>
+      <div class="gallery-item">
+        <img src="d7.jpg" alt="تصویر 5" onclick="openLightbox(this.src, this.alt)">
+        <p class="gallery-caption">تماس های ضروری</p>
+      </div>
+     <div class="gallery-item">
+        <img src="d8.jpg" alt="تصویر 5" onclick="openLightbox(this.src, this.alt)">
+        <p class="gallery-caption">نقشه خطر منزل</p>
+      </div>
+    </div>
+    <p style="font-size:0.8rem; color:#6c757d; margin-top:15px;">برای دیدن تصویر در اندازه بزرگ، روی آن کلیک کنید.</p>
+  </div>
 </div>
+
+<div id="lightbox" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); z-index:1000; justify-content:center; align-items:center; flex-direction:column;" onclick="closeLightbox()">
+  <img id="lightbox-img" style="max-width:90%; max-height:80%; border-radius:16px;">
+  <p id="lightbox-caption" style="color:white; margin-top:15px; font-size:1rem;"></p>
+</div>
+
+<script>
+  function openLightbox(src, alt) {
+    document.getElementById('lightbox').style.display = 'flex';
+    document.getElementById('lightbox-img').src = src;
+    document.getElementById('lightbox-caption').innerText = alt;
+  }
+  function closeLightbox() {
+    document.getElementById('lightbox').style.display = 'none';
+  }
+</script>
 </body>
 </html>

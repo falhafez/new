@@ -2,74 +2,340 @@
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes">
   <title>دانشکده مدیریت و اطلاع‌رسانی پزشکی</title>
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <style>
-    * { margin:0; padding:0; box-sizing:border-box; scroll-behavior:smooth; }
-    body { font-family:'Vazirmatn', sans-serif; background:#f4f7fb; overflow-x:hidden; color:#1e293b; }
-    .hero { text-align:center; padding:60px 20px 40px; }
-    .logo { width:110px; height:110px; margin:auto; border-radius:30px; background:white; box-shadow:0 15px 35px rgba(0,0,0,0.1); display:flex; justify-content:center; align-items:center; overflow:hidden; }
-    .logo img { width:100%; height:100%; object-fit:cover; }
-    .hero h2 { margin-top:20px; color:#153f8f; font-size:1.3rem; font-weight:700; }
-    .hero h1 { font-size:2.8rem; font-weight:900; margin:15px 0; background:linear-gradient(90deg,#00b4d8,#2563eb,#4338ca); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
-    .hero p { font-size:1.2rem; font-weight:600; color:#123b86; }
-    .wave { width:200px; height:3px; background:#94a3b8; margin:30px auto; position:relative; }
-    .wave::before { content:'⚕'; position:absolute; left:50%; top:-16px; transform:translateX(-50%); background:white; padding:0 12px; color:#2563eb; }
-    .container { max-width:1300px; margin:auto; padding:20px; }
-    .main-card { background:white; border-radius:40px; padding:30px; box-shadow:0 15px 35px rgba(0,0,0,0.05); }
-    .about h3 { font-size:1.8rem; margin-bottom:15px; color:#1e3a8a; text-align:center; }
-    .about p { line-height:1.9; font-size:1rem; text-align:justify; }
-    .section-title { text-align:center; margin:50px 0 30px; font-size:2rem; color:#123b86; font-weight:800; }
-    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:25px; }
-    .card { padding:28px 20px; border-radius:32px; text-decoration:none; color:white; transition:all 0.3s ease; box-shadow:0 12px 25px rgba(0,0,0,0.1); display:block; text-align:center; }
-    .card:active { transform:scale(0.98); }
-    .card h3 { font-size:1.3rem; margin-bottom:8px; }
-    .card p { opacity:0.92; line-height:1.6; font-size:0.9rem; }
-    .hit { background:linear-gradient(135deg,#00b4d8,#2563eb); }
-    .mi { background:linear-gradient(135deg,#9d4edd,#5a189a); }
-    .lib { background:linear-gradient(135deg,#ffb703,#fb8500); }
-    .disaster { background:linear-gradient(135deg,#ff6b6b,#e63946); }
-    .he { background:linear-gradient(135deg,#4ade80,#16a34a); }
-    .hp { background:linear-gradient(135deg,#22d3ee,#0891b2); }
-    .footer { margin-top:80px; background:#163b88; padding:40px 20px; text-align:center; color:white; }
-    .footer h3 { font-size:1.6rem; margin-bottom:12px; }
-    @media (max-width:900px) { .hero h1 { font-size:2.3rem; } }
-    @media (max-width:640px) { .hero { padding:40px 16px; } .logo { width:80px; height:80px; } .hero h1 { font-size:2rem; } .main-card { padding:20px; border-radius:30px; } .about h3 { font-size:1.4rem; } .section-title { font-size:1.7rem; } }
-    @media (max-width:480px) { .hero h1 { font-size:1.7rem; } .card h3 { font-size:1.1rem; } .logo { width:70px; height:70px; } }
-    a, .card { -webkit-tap-highlight-color:transparent; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Vazirmatn', sans-serif;
+      background: #f4f7fb;
+      overflow-x: hidden;
+      color: #1e293b;
+    }
+
+    /* هیرو (بخش بالایی) */
+    .hero {
+      text-align: center;
+      padding: 40px 16px 30px;
+    }
+
+    .logo {
+      width: 90px;
+      height: 90px;
+      margin: auto;
+      border-radius: 28px;
+      background: white;
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero h2 {
+      margin-top: 16px;
+      color: #153f8f;
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+
+    .hero h1 {
+      font-size: 1.9rem;
+      font-weight: 900;
+      margin: 12px 0;
+      background: linear-gradient(90deg, #00b4d8, #2563eb, #4338ca);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #123b86;
+    }
+
+    .wave {
+      width: 160px;
+      height: 3px;
+      background: #cbd5e1;
+      margin: 25px auto 0;
+      position: relative;
+    }
+
+    .wave::before {
+      content: '⚕';
+      position: absolute;
+      left: 50%;
+      top: -16px;
+      transform: translateX(-50%);
+      background: white;
+      padding: 0 12px;
+      color: #2563eb;
+      font-size: 1.1rem;
+    }
+
+    /* محتوا اصلی */
+    .container {
+      max-width: 1300px;
+      margin: auto;
+      padding: 0 16px;
+    }
+
+    .main-card {
+      background: white;
+      border-radius: 32px;
+      padding: 20px 18px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    }
+
+    .about h3 {
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+      color: #1e3a8a;
+      text-align: center;
+    }
+
+    .about p {
+      line-height: 1.7;
+      font-size: 0.95rem;
+      text-align: justify;
+    }
+
+    .section-title {
+      text-align: center;
+      margin: 40px 0 24px;
+      font-size: 1.6rem;
+      color: #123b86;
+      font-weight: 800;
+    }
+
+    /* شبکه کارت‌ها */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      padding: 22px 16px;
+      border-radius: 30px;
+      text-decoration: none;
+      color: white;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      display: block;
+      text-align: center;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .card:active {
+      transform: scale(0.97);
+    }
+
+    .card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 6px;
+    }
+
+    .card p {
+      opacity: 0.92;
+      line-height: 1.5;
+      font-size: 0.85rem;
+    }
+
+    /* رنگ‌های رشته‌ها */
+    .hit { background: linear-gradient(135deg, #00b4d8, #2563eb); }
+    .mi { background: linear-gradient(135deg, #9d4edd, #5a189a); }
+    .lib { background: linear-gradient(135deg, #ffb703, #fb8500); }
+    .disaster { background: linear-gradient(135deg, #ff6b6b, #e63946); }
+    .he { background: linear-gradient(135deg, #4ade80, #16a34a); }
+    .hp { background: linear-gradient(135deg, #22d3ee, #0891b2); }
+    .mhs { background: linear-gradient(135deg, #14b8a6, #0f766e); }
+
+    /* فوتر */
+    .footer {
+      margin-top: 60px;
+      background: #163b88;
+      padding: 32px 20px;
+      text-align: center;
+      color: white;
+    }
+
+    .footer h3 {
+      font-size: 1.3rem;
+      margin-bottom: 8px;
+    }
+
+    .footer p {
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }
+
+    /* ========== بهینه‌سازی برای تبلت و موبایل ========== */
+    @media (max-width: 768px) {
+      .hero {
+        padding: 30px 16px 25px;
+      }
+      .logo {
+        width: 75px;
+        height: 75px;
+      }
+      .hero h1 {
+        font-size: 1.7rem;
+      }
+      .hero h2 {
+        font-size: 1rem;
+      }
+      .hero p {
+        font-size: 0.9rem;
+      }
+      .section-title {
+        font-size: 1.4rem;
+        margin: 32px 0 20px;
+      }
+      .card {
+        padding: 18px 14px;
+      }
+      .card h3 {
+        font-size: 1.1rem;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        padding: 0 12px;
+      }
+      .main-card {
+        padding: 16px 14px;
+        border-radius: 28px;
+      }
+      .about h3 {
+        font-size: 1.3rem;
+      }
+      .about p {
+        font-size: 0.9rem;
+        line-height: 1.65;
+      }
+      .grid {
+        gap: 16px;
+      }
+      .card {
+        padding: 16px 12px;
+        border-radius: 26px;
+      }
+      .footer {
+        margin-top: 48px;
+        padding: 28px 16px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero {
+        padding: 20px 12px 20px;
+      }
+      .logo {
+        width: 65px;
+        height: 65px;
+        border-radius: 22px;
+      }
+      .hero h1 {
+        font-size: 1.5rem;
+      }
+      .hero h2 {
+        font-size: 0.9rem;
+      }
+      .hero p {
+        font-size: 0.85rem;
+      }
+      .wave {
+        width: 130px;
+        margin-top: 18px;
+      }
+      .section-title {
+        font-size: 1.3rem;
+        margin: 28px 0 18px;
+      }
+      .grid {
+        grid-template-columns: 1fr; /* هر کارت تمام عرض را بگیرد */
+        gap: 14px;
+      }
+      .card {
+        padding: 14px 12px;
+      }
+      .card h3 {
+        font-size: 1rem;
+      }
+      .card p {
+        font-size: 0.8rem;
+      }
+      .footer h3 {
+        font-size: 1.1rem;
+      }
+      .footer p {
+        font-size: 0.8rem;
+      }
+    }
+
+    /* جلوگیری از سرریز تصاویر و المان‌ها */
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a, .card {
+      -webkit-tap-highlight-color: transparent;
+    }
   </style>
 </head>
 <body>
-<section class="hero">
-  <div class="logo">
-    <img src="logo.png" alt="لوگو">
-  </div>
-  <h2>دانشکده مدیریت و اطلاع‌رسانی پزشکی</h2>
-  <h1>دانش در خدمت سلامت</h1>
-  <p>با مدیریت و فناوری برای زندگی بهتر</p>
-  <div class="wave"></div>
-</section>
-<div class="container">
-  <div class="main-card">
-    <div class="about">
-      <h3>آینده نظام سلامت از اینجا آغاز می‌شود</h3>
-      <p>پشت هر تصمیم درست در نظام سلامت، اطلاعات، فناوری و مدیریت هوشمندانه قرار دارد. دانشکده مدیریت و اطلاع‌رسانی پزشکی دانشگاه علوم پزشکی کرمان با تربیت متخصصان در حوزه فناوری اطلاعات سلامت، انفورماتیک پزشکی، اقتصاد سلامت، سیاست‌گذاری سلامت، سلامت در بلایا و اطلاع‌رسانی پزشکی، در توسعه نظام سلامت کشور نقش مهمی ایفا می‌کند.</p>
+  <section class="hero">
+    <div class="logo">
+      <img src="logo.png" alt="لوگو">
+    </div>
+    <h2>دانشکده مدیریت و اطلاع‌رسانی پزشکی</h2>
+    <h1>دانش در خدمت سلامت</h1>
+    <p>با مدیریت و فناوری برای زندگی بهتر</p>
+    <div class="wave"></div>
+  </section>
+
+  <div class="container">
+    <div class="main-card">
+      <div class="about">
+        <h3>آینده نظام سلامت از اینجا آغاز می‌شود</h3>
+        <p>پشت هر تصمیم درست در نظام سلامت، اطلاعات، فناوری و مدیریت هوشمندانه قرار دارد. دانشکده مدیریت و اطلاع‌رسانی پزشکی دانشگاه علوم پزشکی کرمان با تربیت متخصصان در حوزه فناوری اطلاعات سلامت، انفورماتیک پزشکی، اقتصاد سلامت، سیاست‌گذاری سلامت، سلامت در بلایا، مدیریت خدمات بهداشتی و اطلاع‌رسانی پزشکی، در توسعه نظام سلامت کشور نقش مهمی ایفا می‌کند.</p>
+      </div>
+    </div>
+
+    <h2 class="section-title">معرفی رشته‌های دانشکده</h2>
+    <div class="grid">
+      <a href="hit.html" class="card hit"><h3>فناوری اطلاعات سلامت</h3><p>پیوند سلامت و فناوری</p></a>
+      <a href="mi.html" class="card mi"><h3>انفورماتیک پزشکی</h3><p>هوش داده و تصمیم‌گیری</p></a>
+      <a href="lis.html" class="card lib"><h3>کتابداری و اطلاع‌رسانی پزشکی</h3><p>مدیریت دانش سلامت</p></a>
+      <a href="disaster.html" class="card disaster"><h3>سلامت در بلایا و فوریت‌ها</h3><p>آمادگی و پاسخ به بحران</p></a>
+      <a href="he.html" class="card he"><h3>اقتصاد سلامت</h3><p>تحلیل منابع سلامت</p></a>
+      <a href="hp.html" class="card hp"><h3>سیاست‌گذاری سلامت</h3><p>حکمرانی و عدالت سلامت</p></a>
+      <a href="mhs.html" class="card mhs"><h3>مدیریت خدمات بهداشتی و درمانی</h3><p>مدیریت بیمارستان و نظام سلامت</p></a>
     </div>
   </div>
-  <h2 class="section-title">معرفی رشته‌های دانشکده </h2>
-  <div class="grid">
-    <a href="hit.html" class="card hit"><h3>فناوری اطلاعات سلامت</h3><p>پیوند سلامت و فناوری</p></a>
-    <a href="mi.html" class="card mi"><h3>انفورماتیک پزشکی</h3><p>هوش داده و تصمیم‌گیری</p></a>
-    <a href="lis.html" class="card lib"><h3>کتابداری و اطلاع‌رسانی پزشکی</h3><p>مدیریت دانش سلامت</p></a>
-    <a href="disaster.html" class="card disaster"><h3>سلامت در بلایا و فوریت‌ها</h3><p>آمادگی و پاسخ به بحران</p></a>
-    <a href="he.html" class="card he"><h3>اقتصاد سلامت</h3><p>تحلیل منابع سلامت</p></a>
-    <a href="hp.html" class="card hp"><h3>سیاست‌گذاری سلامت</h3><p>حکمرانی و عدالت سلامت</p></a>
-  </div>
-</div>
-<footer class="footer">
-  <h3>دانشکده مدیریت و اطلاع‌رسانی پزشکی</h3>
-  <p>دانشگاه علوم پزشکی کرمان</p>
-</footer>
+
+  <footer class="footer">
+    <h3>دانشکده مدیریت و اطلاع‌رسانی پزشکی</h3>
+    <p>دانشگاه علوم پزشکی کرمان</p>
+  </footer>
 </body>
 </html>
