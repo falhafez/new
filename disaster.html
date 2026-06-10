@@ -110,50 +110,48 @@
 
   <a href="index.html" class="back-btn">← بازگشت به صفحه اصلی</a>
 
-  <div class="gallery">
-    <h3>🖼 گالری تصاویر</h3>
-    <div class="gallery-grid">
-     <div class="gallery-item">
-        <img src="d.PNG" alt="تصویر 1" onclick="openLightbox(this.src, this.alt)">
-        <p class="gallery-caption">اینفوگرافی</p>
-      </div>
-      <div class="gallery-item">
-        <img src="d1.jpg" alt="تصویر 1" onclick="openLightbox(this.src, this.alt)">
-        <p class="gallery-caption">آمادگی خانوار</p>
-      </div>
-      <div class="gallery-item">
-        <img src="d2.jpg" alt="تصویر 2" onclick="openLightbox(this.src, this.alt)">
-        <p class="gallery-caption">آمادگی ساختمان</p>
-      </div>
-      <div class="gallery-item">
-        <img src="d3.jpg" alt="تصویر 3" onclick="openLightbox(this.src, this.alt)">
-        <p class="gallery-caption">کنترل استرس در جنگ</p>
-      </div>
-        <div class="gallery-item">
-        <img src="d4.jpg" alt="تصویر 4" onclick="openLightbox(this.src, this.alt)">
-        <p class="gallery-caption">کوله شرایط اضطراری</p>
-      </div>
-       <div class="gallery-item">
-        <img src="d5.jpg" alt="تصویر 5" onclick="openLightbox(this.src, this.alt)">
-        <p class="gallery-caption">نقشه تماس اضطراری</p>
-      </div>
-       <div class="gallery-item">
-        <img src="d6.jpg" alt="تصویر 5" onclick="openLightbox(this.src, this.alt)">
-        <p class="gallery-caption">مدیریت اخبار در جنگ</p>
-      </div>
-      <div class="gallery-item">
-        <img src="d7.jpg" alt="تصویر 5" onclick="openLightbox(this.src, this.alt)">
-        <p class="gallery-caption">تماس های ضروری</p>
-      </div>
-     <div class="gallery-item">
-        <img src="d8.jpg" alt="تصویر 5" onclick="openLightbox(this.src, this.alt)">
-        <p class="gallery-caption">نقشه خطر منزل</p>
-      </div>
+ <div class="gallery">
+  <h3>🖼 گالری تصاویر</h3>
+  <div class="gallery-grid">
+    <div class="gallery-item">
+      <img src="d.PNG" alt="اینفوگرافی" onclick="openLightbox(this.src, this.alt)">
+      <p class="gallery-caption">اینفوگرافی</p>
     </div>
-    <p style="font-size:0.8rem; color:#6c757d; margin-top:15px;">برای دیدن تصویر در اندازه بزرگ، روی آن کلیک کنید.</p>
-  </div>
-</div>
-
+    <div class="gallery-item">
+      <img src="d1.jpg" alt="آمادگی خانوار" onclick="openLightbox(this.src, this.alt)">
+      <p class="gallery-caption">آمادگی خانوار</p>
+    </div>
+    <div class="gallery-item">
+      <img src="d2.jpg" alt="آمادگی ساختمان" onclick="openLightbox(this.src, this.alt)">
+      <p class="gallery-caption">آمادگی ساختمان</p>
+    </div>
+    <div class="gallery-item">
+      <img src="d3.jpg" alt="کنترل استرس در جنگ" onclick="openLightbox(this.src, this.alt)">
+      <p class="gallery-caption">کنترل استرس در جنگ</p>
+    </div>
+    <div class="gallery-item">
+      <img src="d4.jpg" alt="کوله شرایط اضطراری" onclick="openLightbox(this.src, this.alt)">
+      <p class="gallery-caption">کوله شرایط اضطراری</p>
+    </div>
+    <div class="gallery-item">
+      <img src="d5.jpg" alt="نقشه تماس اضطراری" onclick="openLightbox(this.src, this.alt)">
+      <p class="gallery-caption">نقشه تماس اضطراری</p>
+    </div>
+    <div class="gallery-item">
+      <img src="d6.jpg" alt="مدیریت اخبار در جنگ" onclick="openLightbox(this.src, this.alt)">
+      <p class="gallery-caption">مدیریت اخبار در جنگ</p>
+    </div>
+    <div class="gallery-item">
+      <img src="d7.jpg" alt="تماس های ضروری" onclick="openLightbox(this.src, this.alt)">
+      <p class="gallery-caption">تماس های ضروری</p>
+    </div>
+    <div class="gallery-item">
+      <img src="d8.jpg" alt="نقشه خطر منزل" onclick="openLightbox(this.src, this.alt)">
+      <p class="gallery-caption">نقشه خطر منزل</p>
+    </div>
+  </div> <!-- بسته شدن gallery-grid -->
+  <p style="font-size:0.8rem; color:#6c757d; margin-top:15px;">برای دیدن تصویر در اندازه بزرگ، روی آن کلیک کنید.</p>
+</div> <!-- بسته شدن gallery -->
 <div id="lightbox" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); z-index:1000; justify-content:center; align-items:center; flex-direction:column;" onclick="closeLightbox()">
   <img id="lightbox-img" style="max-width:90%; max-height:80%; border-radius:16px;">
   <p id="lightbox-caption" style="color:white; margin-top:15px; font-size:1rem;"></p>
